@@ -5,7 +5,6 @@ For this reason, xml2js produces a not very clean output.
 This package tries to apply some heuristics to clean xml2js output.
 
 Heuristics should be based on some known assumptions on the underlying xml schema.
-For example, the name of a list is often the plural of the name of of its elements.
 
 Users can define their own heuristics, too.
 
