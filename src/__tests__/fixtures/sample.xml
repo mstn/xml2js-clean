@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<sample>
+  <title>fee</title>
+  <number>2.4</number>
+  <integer>399</integer>
+  <items>
+    <item>foe</item>
+    <item>foo</item>
+  </items>
+  <entities>
+    <entity>
+      <hello>world</hello>
+    </entity>
+    <entity>
+      <hello>mum</hello>
+    </entity>
+  </entities>
+</sample>

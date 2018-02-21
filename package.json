@@ -1,0 +1,41 @@
+{
+  "name": "xml2js-clean",
+  "version": "0.0.0",
+  "description": "clean xml2js output based on some user defined heuristics",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "predeploy": "npm run lint && npm run test",
+    "deploy": "./scripts/deploy.sh",
+    "compile": "tsc",
+    "lint": "tslint 'src/*.ts'"
+  },
+  "author": "mstn@posteo.org",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "^22.1.1",
+    "@types/lodash": "^4.14.104",
+    "@types/node": "^9.4.3",
+    "@types/xml2js": "^0.4.2",
+    "jest": "^22.2.1",
+    "ts-jest": "^22.0.3",
+    "tslint": "^5.9.1",
+    "typescript": "^2.6.2",
+    "xml2js": "^0.4.19"
+  },
+  "jest": {
+    "transform": {
+      ".(ts|tsx)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "testRegex": "(/__tests__/.*\\.(test|spec))\\.(ts|tsx|js)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "json"
+    ]
+  },
+  "dependencies": {
+    "lodash": "^4.17.5"
+  }
+}
