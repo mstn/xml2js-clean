@@ -7,7 +7,7 @@
     <item>foe</item>
     <item>foo</item>
   </items>
-  <entities>
+  <entities test="true">
     <entity>
       <hello>world</hello>
     </entity>

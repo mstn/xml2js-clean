@@ -7,7 +7,7 @@ import {
 
 import { parseString } from 'xml2js';
 
-import fs from 'fs';
+import * as fs from 'fs';
 
 const content = fs.readFileSync('./src/__tests__/fixtures/sample.xml');
 
@@ -27,11 +27,16 @@ describe('cleanXml', () => {
           title: 'fee',
           number: 2.4,
           integer: 399,
-          items: [ 'foe', 'foo' ],
-          entities: [
-            { hello: 'world' },
-            { hello: 'mum' },
-          ]
+          items: ['foe', 'foo'],
+          entities: {
+            $: {
+              test: 'true'
+            },
+            entity: [
+              { hello: 'world' },
+              { hello: 'mum' },
+            ]
+          }
         }
       });
       done();
@@ -53,10 +58,10 @@ describe('cleanXml', () => {
       tagNameProcessor: (name: string) => name.toUpperCase()
     });
     expect(cleanedXml).toMatchObject({
-       SAMPLE: {
-         FEE: 'fee',
-         FOE: 'foe',
-       }
+      SAMPLE: {
+        FEE: 'fee',
+        FOE: 'foe',
+      }
     })
   });
 
