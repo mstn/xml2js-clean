@@ -20,11 +20,11 @@ export function isString(xml: XmlDocument): xml is string {
   return _.isString(xml);
 }
 
-interface Operation {
+export interface Operation {
   (xml: XmlDocument, parentKey?: string): XmlDocument;
 }
 
-interface Context {
+export interface Context {
   operations: Array<Operation>;
   tagNameProcessor?(name: string): string;
 }
