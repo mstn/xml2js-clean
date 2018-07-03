@@ -1,6 +1,10 @@
 {
   "name": "xml2js-clean",
   "version": "0.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mstn/xml2js-clean"
+  },
   "description": "clean xml2js output based on some user defined heuristics",
   "main": "index.js",
   "scripts": {
