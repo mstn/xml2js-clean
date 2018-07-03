@@ -34,7 +34,7 @@ export function transformEnglishSingularNamesToArray(
 
         const i = singulars.indexOf(childrenKeys[0]);
 
-        if( i !== -1) {
+        if ( i !== -1 ) {
             return xml[singulars[i]];
         }
       }
@@ -48,12 +48,12 @@ export function parseNumericValues(xml: XmlDocument) {
     const value = xml.trim();
     const isInteger = /^-{0,1}\d+$/;
     const isFloat = /^\d+\.\d+$/;
-    if (value.match(isInteger)){
+    if (value.match(isInteger)) {
       const intValue = parseInt(value, 10);
       if (Number.isSafeInteger(intValue)) {
         return intValue;
       }
-    } else if (value.match(isFloat) && value.length<=15) {
+    } else if ( value.match(isFloat) && value.length <= 15 ) {
       const floatValue = parseFloat(value);
       return floatValue;
     }
